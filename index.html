@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment-Decrement</title>
+    <style>
+        body{
+            background-image: url("background1.jpg");
+            background-size:cover;
+        }
+        .main-container{
+            display: flex;
+        }
+        .card{
+            display:block;
+            background-color: rgba(120, 167, 238, 0.4);
+            width:300px;
+            display:block;
+            margin:150px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .headphone-img{
+            
+            width: 300px;
+        }
+        .text{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .flex-container{
+            display:flex;
+            justify-content: space-around;
+        }
+        .click-img{
+            width:30px;
+            
+        }
+        #quantity{
+            font-size: 25px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <div class="card">
+        <img src="headphone.png" class="headphone-img">
+        <p class="text"><i>ZEBRONICS Thunder Bluetooth 5.3 Wireless Over Ear Headphones, Call Function(Sea Green)</i></p>
+        <p class="text">Price: ₹5500/-</p><br/>
+        <div class="flex-container">
+          <img src="plus.png" class="click-img" onclick="ChngeQuantity('increment')">
+          <span id="quantity">1</span>
+          <img src="minus.png" class="click-img" onclick="ChngeQuantity('decrement')">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="headphones2.png" class="headphone-img">
+        <p class="text"><i>ZEBRONICS Thunder Bluetooth 5.3 Wireless Over Ear Headphones, Call Function(Sea Green)</i></p>
+        <p class="text">Price: 7500/-</p><br/>
+        <div class="flex-container">
+          <img src="plus.png" class="click-img" onclick="ChngeQuantity('increment')">
+          <span id="quantity">1</span>
+          <img src="minus.png" class="click-img" onclick="ChngeQuantity('decrement')">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="headphones3.png" class="headphone-img">
+        <p class="text"><i>ZEBRONICS Thunder Bluetooth 5.3 Wireless Over Ear Headphones, Call Function(Sea Green)</i></p>
+        <p class="text">Price: ₹4500/-</p><br/>
+        <div class="flex-container">
+          <img src="plus.png" class="click-img" onclick="ChngeQuantity('increment')">
+          <span id="quantity">1</span>
+          <img src="minus.png" class="click-img" onclick="ChngeQuantity('decrement')">
+        </div>
+    </div>
+
+    
+    </div>
+
+    <script>
+        const quantityElement = document.getElementById("quantity");
+        let quantity = parseInt(quantityElement.innerText);
+
+        function ChngeQuantity(op) {
+
+            if (op == 'increment')
+                ++quantity;
+
+            if (op == 'decrement'&& quantity>1)
+                --quantity;
+
+            quantityElement.innerText = quantity;
+        }
+    </script>
+</body>
+</html>
