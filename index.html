@@ -55,14 +55,14 @@
         </div>
     </div>
 
-    <div class="card">
+    <!-- <div class="card">
         <img src="headphones2.png" class="headphone-img">
         <p class="text"><i>ZEBRONICS Thunder Bluetooth 5.3 Wireless Over Ear Headphones, Call Function(Sea Green)</i></p>
         <p class="text">Price: 7500/-</p><br/>
         <div class="flex-container">
-          <img src="plus.png" class="click-img" onclick="ChngeQuantity('increment')">
-          <span id="quantity">1</span>
-          <img src="minus.png" class="click-img" onclick="ChngeQuantity('decrement')">
+          <img src="plus.png" class="click-img" onclick="ChngeQuantity2('increment')">
+          <span id="quantity2">1</span>
+          <img src="minus.png" class="click-img" onclick="ChngeQuantity2('decrement')">
         </div>
     </div>
 
@@ -71,17 +71,17 @@
         <p class="text"><i>ZEBRONICS Thunder Bluetooth 5.3 Wireless Over Ear Headphones, Call Function(Sea Green)</i></p>
         <p class="text">Price: ₹4500/-</p><br/>
         <div class="flex-container">
-          <img src="plus.png" class="click-img" onclick="ChngeQuantity('increment')">
-          <span id="quantity">1</span>
-          <img src="minus.png" class="click-img" onclick="ChngeQuantity('decrement')">
+          <img src="plus.png" class="click-img" onclick="ChngeQuantity3('increment')">
+          <span id="quantity3">1</span>
+          <img src="minus.png" class="click-img" onclick="ChngeQuantity3('decrement')">
         </div>
-    </div>
+    </div> -->
 
     
     </div>
 
     <script>
-        const quantityElement = document.getElementById("quantity");
+        const quantityElement = document.getElementsById("quantity");
         let quantity = parseInt(quantityElement.innerText);
 
         function ChngeQuantity(op) {
@@ -94,6 +94,35 @@
 
             quantityElement.innerText = quantity;
         }
+
+        const quantityElement2 = document.getElementsById("quantity2");
+        let quantity2 = parseInt(quantityElement2.innerText);
+
+        function ChngeQuantity2(op2) {
+
+            if (op2 == 'increment')
+                ++quantity2;
+
+            if (op2 == 'decrement'&& quantity2>1)
+                --quantity2;
+
+            quantityElement2.innerText = quantity2;
+        }
+
+        const quantityElement3 = document.getElementsById("quantity3");
+        let quantity3 = parseInt(quantityElement3.innerText);
+
+        function ChngeQuantity3(op3) {
+
+            if (op3 == 'increment')
+                ++quantity3;
+
+            if (op == 'decrement'&& quantity3>1)
+                --quantity3;
+
+            quantityElement3.innerText = quantity3;
+        }
+        
     </script>
 </body>
 </html>
